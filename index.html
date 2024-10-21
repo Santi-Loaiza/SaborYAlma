@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabor Y Alma</title>
-    <link rel="stylesheet" href=""> <!-- Enlace a tu CSS si es necesario -->
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
 
     <header>
         <nav>
-            <div class="logo">
-                <a href="index.html">
+            <div class="nav-logo">
+                <a href="./index.html">
                     <img src="./IMAGES/LOGOS/IMG_2795.PNG" alt="Logo Corto en blanco"/>
                 </a>
             </div>
-            <div class="menu">
+            <div class="nav-menu">
                 <ul>
-                    <li><a href="#quienes-somos">¿Quienes somos?</a></li>
+                    <li><a href="./HTML/quienesSomos.html">¿Quienes somos?</a></li>
                     <li><a href="#reservar-mesa">Reservar mesa</a></li>
                     <li><a href="#realizar-pedido">Realizar un pedido</a></li>
-                    <li><a href="#iniciar-sesion">Iniciar sesión</a></li>
-                    <li><a href="#crear-cuenta">Crear cuenta</a></li>
+                    <li><a id="iniciar-sesion-boton" href="#iniciar-sesion">Iniciar sesión</a></li>
+                    <li><a id="crear-cuenta-boton" href="#crear-cuenta">Crear cuenta</a></li>
                 </ul>
             </div>
         </nav>
@@ -49,10 +49,118 @@
                 <a href="" class="boton">Conoce mas</a>
             </div>
         </section>
+        <section id="platos-destacados">
+            <h3>Nuestros platos destacados</h3>
+            <div class="flex-container">
+                <div class="plato">
+                    <img src="./IMAGES/MENUSABORYALMA/LomoSaborYAlma.jpg" alt="Lomo Sabor Y Alma" />
+                    <p>Lomo Sabor Y Alma</p>
+                </div>
+                <div class="plato">
+                    <img src="./IMAGES/MENUSABORYALMA/PulpoSaborYAlma.jpg" alt="Pulpo Sabor Y Alma" />
+                    <p>Pulpo Sabor Y Alma</p>
+                </div>
+                <div class="plato">
+                    <img src="./IMAGES/MENUSABORYALMA/RollitosHeisei.jpg" alt="Rollitos Heisei" />
+                    <p>Rollitos Heisei</p>
+                </div>
+                <div class="plato">
+                    <img src="./IMAGES/MENUSABORYALMA/PolloTrufado.jpg" alt="Pollo trufado" />
+                    <p>Pollo trufado</p>
+                </div>
+            </div>
+            <div class="boton-menu">
+                <a href="#menu" class="btn">Conoce nuestro menú</a>
+            </div>
+        </section>
+        <section id="reseñas-y-horarios">
+            <div class="reseñas">
+                <h2>Reseñas</h2>
+                <div class="reseña">
+                    <img src="./IMAGES/Ellipse 1.png" alt="">
+                    <h4>Usuario1</h4>
+                    <p>Fooder</p>
+                    <p>“La experiencia en el restaurante fue maravillosa, super recomendado, en especial el servicio es excelente”</p>
+                </div>
+                <div class="reseña">
+                    <img src="./IMAGES/Ellipse 1.png" alt="">
+                    <h4>Usuario2</h4>
+                    <p>Vlogger</p>
+                    <p>“Lo ame, me encanto todo, un restaurante verdaderamente encantador, sin duda alguna volveria”</p>
+                </div>
+            </div>
+        
+            <div class="horario-reservas">
+                <h2>Horario de Reservas</h2>
+                <div class="tabla-horarios">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Día</th>
+                                <th>Horario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Lunes</td>
+                                <td>12:00 PM A 9:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Martes</td>
+                                <td>12:00 PM A 9:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Miércoles</td>
+                                <td>12:00 PM A 9:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Jueves</td>
+                                <td>12:00 PM A 10:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Viernes</td>
+                                <td>12:00 PM A 10:30 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Sábado</td>
+                                <td>1:00 PM A 11:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Domingo</td>
+                                <td>11:00 PM A 8:30 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Festivo</td>
+                                <td>12:00 PM A 8:30 PM</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Elige el número de personas, fecha y hora disponible para realizar tu reserva</p>
+                <a href="#reservar" class="btn-reservar">Reservar ahora</a>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <!-- Aquí va el pie de página -->
+        <div class="footer-links">
+            <ul>
+                <li><a href="#terminos-y-condiciones">Términos y condiciones de uso</a></li>
+                <li><a href="#politica-de-privacidad">Política de privacidad</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="subtitulo-sabor">
+            <img src="./IMAGES/LOGOS/IMG_2802.PNG" alt="">
+        </div>
+        <div class="logo">
+            <a href="">
+                <img src="./IMAGES/LOGOS/IMG_2795.PNG" alt="Logo Corto" />
+            </a>
+        </div>
+        <div class="footer-copyright">
+            <p>Copyright © 2024</p>
+        </div>
     </footer>
 
 </body>
