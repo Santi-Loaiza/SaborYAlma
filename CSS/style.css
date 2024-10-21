@@ -42,3 +42,17 @@ nav ul li a {
 #crear-cuenta-boton{
     font-weight: lighter;
 }
+.main-header-home{
+    background-image: url(/IMAGES/OTHERS/home-main-header.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 1000px 1000px 1000px rgba(0, 0, 0, 0.5);
+    height: 88vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.main-header-home img{
+    max-width: 800px;
+    max-height: 400px;
+}
