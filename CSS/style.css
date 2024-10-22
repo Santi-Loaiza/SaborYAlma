@@ -110,3 +110,66 @@ nav ul li a {
     border-radius: 10px;
     color: white;
 }
+#platos-destacados{
+    text-align: center;
+    font-weight: bold;
+}
+#platos-destacados .platos-destacados-main{
+    background-color: var(--primary-color);
+    padding: 40px;
+}
+#platos-destacados h2{
+    color: white;
+    padding-bottom: 50px;
+    font-size: 2rem;
+}
+#platos-destacados .flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+#platos-destacados .flex-container .plato {
+    background-color: white;
+    max-width: 300px;
+    padding: 10px 10px 40px 10px;
+    border-radius: 10px;
+    font-size: 1.15rem;
+}
+#platos-destacados .flex-container .plato .plato-img1,
+#platos-destacados .flex-container .plato .plato-img2,
+#platos-destacados .flex-container .plato .plato-img3,
+#platos-destacados .flex-container .plato .plato-img4{
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 220px;
+    margin: 8px 8px 30px 8px ;
+    border-radius: 10px;
+}
+#platos-destacados .flex-container .plato .plato-img1{
+    background-image: url('/IMAGES/MENUSABORYALMA/LomoSaborYAlma.jpg')
+}
+#platos-destacados .flex-container .plato .plato-img2{
+    background-image: url('/IMAGES/MENUSABORYALMA/PulpoSaborYAlma.jpg');
+}
+#platos-destacados .flex-container .plato .plato-img3{
+    background-image: url('/IMAGES/MENUSABORYALMA/RollitosHeisei.jpg');
+}
+#platos-destacados .flex-container .plato .plato-img4{
+    background-image: url('/IMAGES/MENUSABORYALMA/PolloTrufado.jpg');
+}
+#platos-destacados .boton-menu{
+    background-color: var(--second-color);
+    height: 7rem;
+    width: 100%;
+    align-content: center;
+}
+#platos-destacados .boton-menu a{
+    background-color: var(--primary-color);
+    padding: 20px 40px 20px 40px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    border-radius: 10px;
+}
