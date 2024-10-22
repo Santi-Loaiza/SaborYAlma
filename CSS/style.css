@@ -5,47 +5,57 @@
     --fourth-color: #0e5f01;
     --fifth-color: #1c3504;
 }
-*{
+
+* {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-nav{
+
+nav {
     background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.nav-logo img{
+
+.nav-logo img {
     max-width: 60px;
     margin: 10px;
 }
-nav ul{
+
+nav ul {
     list-style: none;
     display: flex;
     gap: 1rem;
     margin-right: 40px;
 }
+
 nav ul li a {
     color: white;
     text-decoration: none;
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
     color: var(--primary-color);
 }
-#iniciar-sesion-boton{
+
+#iniciar-sesion-boton {
     background-color: var(--third-color);
     padding: 12px 17px 12px 17px;
     border-radius: 5px;
 }
-#iniciar-sesion-boton:hover{
+
+#iniciar-sesion-boton:hover {
     background-color: var(--second-color);
 }
-#crear-cuenta-boton{
+
+#crear-cuenta-boton {
     font-weight: lighter;
 }
-.main-header-home{
+
+.main-header-home {
     background-image: url(/IMAGES/OTHERS/home-main-header.jpg);
     background-size: cover;
     background-position: center;
@@ -55,29 +65,34 @@ nav ul li a:hover{
     justify-content: center;
     display: flex;
 }
-.main-header-home img{
+
+.main-header-home img {
     max-width: 800px;
     max-height: 400px;
-}.main-section {
+}
+
+.main-section {
     background-color: black;
     color: white;
-    display: flex; 
+    display: flex;
     height: 700px;
-    gap: 20px; 
-    justify-content: space-between; 
+    gap: 20px;
+    justify-content: space-between;
     text-align: center;
     align-items: center;
     flex-wrap: wrap;
 }
-.main-section-left{
+
+.main-section-left {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 700px;
 }
+
 .main-section #div-1 {
     padding: 50px;
-    min-width: 700px; 
+    min-width: 700px;
     max-width: 750px;
 }
 
@@ -102,8 +117,8 @@ nav ul li a:hover{
 }
 
 .main-section #div-4 {
-    flex: 0 0 20%; 
-    width: 800px; 
+    flex: 0 0 20%;
+    width: 800px;
 }
 
 .main-section #div-4 a {
@@ -113,29 +128,35 @@ nav ul li a:hover{
     border-radius: 10px;
     color: white;
 }
-.main-section #div-4 a:hover{
+
+.main-section #div-4 a:hover {
     background-color: var(--fifth-color);
     color: var(--third-color);
 }
-#platos-destacados{
+
+#platos-destacados {
     text-align: center;
     font-weight: bold;
 }
-#platos-destacados .platos-destacados-main{
+
+#platos-destacados .platos-destacados-main {
     background-color: var(--primary-color);
     padding: 40px;
 }
-#platos-destacados h2{
+
+#platos-destacados h2 {
     color: white;
     padding-bottom: 50px;
     font-size: 2rem;
 }
-#platos-destacados .flex-container{
+
+#platos-destacados .flex-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
 }
+
 #platos-destacados .flex-container .plato {
     background-color: white;
     max-width: 300px;
@@ -143,36 +164,43 @@ nav ul li a:hover{
     border-radius: 10px;
     font-size: 1.15rem;
 }
+
 #platos-destacados .flex-container .plato .plato-img1,
 #platos-destacados .flex-container .plato .plato-img2,
 #platos-destacados .flex-container .plato .plato-img3,
-#platos-destacados .flex-container .plato .plato-img4{
+#platos-destacados .flex-container .plato .plato-img4 {
     background-size: cover;
     background-position: center;
     width: 200px;
     height: 220px;
-    margin: 8px 8px 30px 8px ;
+    margin: 8px 8px 30px 8px;
     border-radius: 10px;
 }
-#platos-destacados .flex-container .plato .plato-img1{
+
+#platos-destacados .flex-container .plato .plato-img1 {
     background-image: url('/IMAGES/MENUSABORYALMA/LomoSaborYAlma.jpg')
 }
-#platos-destacados .flex-container .plato .plato-img2{
+
+#platos-destacados .flex-container .plato .plato-img2 {
     background-image: url('/IMAGES/MENUSABORYALMA/PulpoSaborYAlma.jpg');
 }
-#platos-destacados .flex-container .plato .plato-img3{
+
+#platos-destacados .flex-container .plato .plato-img3 {
     background-image: url('/IMAGES/MENUSABORYALMA/RollitosHeisei.jpg');
 }
-#platos-destacados .flex-container .plato .plato-img4{
+
+#platos-destacados .flex-container .plato .plato-img4 {
     background-image: url('/IMAGES/MENUSABORYALMA/PolloTrufado.jpg');
 }
-#platos-destacados .boton-menu{
+
+#platos-destacados .boton-menu {
     background-color: var(--second-color);
     height: 7rem;
     width: 100%;
     align-content: center;
 }
-#platos-destacados .boton-menu a{
+
+#platos-destacados .boton-menu a {
     background-color: var(--primary-color);
     padding: 20px 40px 20px 40px;
     color: white;
@@ -180,18 +208,21 @@ nav ul li a:hover{
     font-size: 1.3rem;
     border-radius: 10px;
 }
-#platos-destacados .boton-menu a:hover{
+
+#platos-destacados .boton-menu a:hover {
     background-color: var(--fifth-color);
     color: var(--third-color);
 }
-#reseñas-y-horarios{
+
+#reseñas-y-horarios {
     display: flex;
     max-width: 100%;
     justify-content: space-between;
     height: 85vh;
     flex-wrap: wrap;
 }
-#reseñas-y-horarios .reseñas{
+
+#reseñas-y-horarios .reseñas {
     width: 40%;
     min-width: 450px;
     padding: 60px;
@@ -200,32 +231,39 @@ nav ul li a:hover{
     align-items: center;
     gap: 30px;
 }
-#reseñas-y-horarios .reseñas .reseña{
+
+#reseñas-y-horarios .reseñas .reseña {
     max-width: 450px;
     padding: 30px;
-    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.5);;
+    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.5);
+    ;
 }
-#reseñas-y-horarios .reseñas .reseña .usuario-info{
+
+#reseñas-y-horarios .reseñas .reseña .usuario-info {
     display: flex;
     gap: 10px;
     margin-bottom: 25px;
 }
-#reseñas-y-horarios .reseñas .reseña .usuario-info img{
+
+#reseñas-y-horarios .reseñas .reseña .usuario-info img {
     width: 50px;
 }
-.horario-reservas{
+
+.horario-reservas {
     width: 55%;
     min-width: 600px;
     padding: 60px;
-    background-color: black; 
+    background-color: black;
 }
-.horario-reservas h2{
+
+.horario-reservas h2 {
     color: white;
     text-align: center;
     margin-bottom: 30px;
-   
+
 }
-.tabla-horarios{
+
+.tabla-horarios {
     width: 70%;
     height: 80%;
     margin: 0 auto;
@@ -236,11 +274,13 @@ nav ul li a:hover{
     flex-direction: column;
     align-items: center;
 }
-.tabla-horarios table{
+
+.tabla-horarios table {
     width: 100%;
     padding: 20px;
 }
-.tabla-horarios tr{
+
+.tabla-horarios tr {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -248,15 +288,18 @@ nav ul li a:hover{
     padding-top: 6px;
     border-bottom: var(--fifth-color) 1px solid;
 }
-.tabla-horarios tr #dia-semana{
+
+.tabla-horarios tr #dia-semana {
     font-size: 1.2rem;
     font-weight: bold;
 }
-.tabla-horarios p{
+
+.tabla-horarios p {
     width: 75%;
     margin: 0 auto;
 }
-.boton-reservar{
+
+.boton-reservar {
     background-color: var(--fourth-color);
     color: white;
     text-decoration: none;
@@ -264,61 +307,74 @@ nav ul li a:hover{
     border-radius: 10px;
     text-align: center;
     width: 40%;
-    margin: 30px ;
+    margin: 30px;
     font-size: 1.2rem;
 }
-.boton-reservar:hover{
+
+.boton-reservar:hover {
     background-color: var(--second-color);
     color: var(--primary-color);
 }
-.logo-relleno{
+
+.logo-relleno {
     height: 35vh;
     display: flex;
     justify-content: center;
 }
-.logo-relleno img{
+
+.logo-relleno img {
     height: 100%;
     padding: 10px;
 }
-#logo-relleno-home{
+
+#logo-relleno-home {
     background-color: var(--fifth-color);
 }
-.footer-links ul{
+
+.footer-links ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
-.footer-links ul li a{
+
+.footer-links ul li a {
     text-decoration: none;
     color: white;
 }
-.footer-links ul li a:hover{
+
+.footer-links ul li a:hover {
     color: var(--fourth-color);
 }
-footer{
-   background-color: black; 
-   text-align: center;
+
+footer {
+    background-color: black;
+    text-align: center;
     padding: 70px 40px 10px 40px;
 }
-.footer-info{
+
+.footer-info {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 60px;
 }
-footer p{
+
+footer p {
     color: white;
 }
+
 .footer-links {
     width: 50%;
 }
-.logos-footer{
+
+.logos-footer {
     width: 50%;
     display: flex;
     justify-content: space-between;
 }
-.logos-footer img{
+
+.logos-footer img {
     width: 100%;
     max-width: 250px;
     max-height: 70px;
