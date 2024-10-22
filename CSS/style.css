@@ -55,4 +55,58 @@ nav ul li a {
 .main-header-home img{
     max-width: 800px;
     max-height: 400px;
+}.main-section {
+    background-color: black;
+    color: white;
+    display: flex; 
+    height: 700px;
+    gap: 20px; 
+    justify-content: space-between; 
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.main-section-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 700px;
+}
+.main-section #div-1 {
+    padding: 50px;
+    min-width: 700px; 
+    max-width: 750px;
+}
+
+.main-section #div-2 {
+    background-image: url('/IMAGES/OTHERS/cocina-imagen-section.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 1000px 1000px 1000px rgba(0, 0, 0, 0.5);
+    height: 700px;
+    min-width: 500px;
+    max-width: 900px;
+    align-content: center;
+}
+
+.main-section #div-2 img {
+    max-width: 300px;
+}
+
+.main-section #div-3 {
+    padding: 50px;
+    max-width: 750px;
+}
+
+.main-section #div-4 {
+    flex: 0 0 20%; /* Toma el 20% de la altura del contenedor */
+    width: 800px; /* Ancho fijo */
+}
+
+.main-section #div-4 a {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    padding: 20px 30px;
+    border-radius: 10px;
+    color: white;
 }
