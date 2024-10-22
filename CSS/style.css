@@ -256,3 +256,15 @@ nav ul li a {
     margin: 30px ;
     font-size: 1.2rem;
 }
+.logo-relleno{
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+}
+.logo-relleno img{
+    height: 100%;
+    padding: 10px;
+}
+#logo-relleno-home{
+    background-color: var(--fifth-color);
+}
