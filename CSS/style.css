@@ -31,6 +31,9 @@ nav ul li a {
     color: white;
     text-decoration: none;
 }
+nav ul li a:hover{
+    color: var(--primary-color);
+}
 #iniciar-sesion-boton{
     background-color: var(--third-color);
     padding: 12px 17px 12px 17px;
@@ -110,6 +113,10 @@ nav ul li a {
     border-radius: 10px;
     color: white;
 }
+.main-section #div-4 a:hover{
+    background-color: var(--fifth-color);
+    color: var(--third-color);
+}
 #platos-destacados{
     text-align: center;
     font-weight: bold;
@@ -172,6 +179,10 @@ nav ul li a {
     text-decoration: none;
     font-size: 1.3rem;
     border-radius: 10px;
+}
+#platos-destacados .boton-menu a:hover{
+    background-color: var(--fifth-color);
+    color: var(--third-color);
 }
 #reseñas-y-horarios{
     display: flex;
@@ -256,6 +267,10 @@ nav ul li a {
     margin: 30px ;
     font-size: 1.2rem;
 }
+.boton-reservar:hover{
+    background-color: var(--second-color);
+    color: var(--primary-color);
+}
 .logo-relleno{
     height: 35vh;
     display: flex;
@@ -267,4 +282,44 @@ nav ul li a {
 }
 #logo-relleno-home{
     background-color: var(--fifth-color);
+}
+.footer-links ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.footer-links ul li a{
+    text-decoration: none;
+    color: white;
+}
+.footer-links ul li a:hover{
+    color: var(--fourth-color);
+}
+footer{
+   background-color: black; 
+   text-align: center;
+    padding: 70px 40px 10px 40px;
+}
+.footer-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+}
+footer p{
+    color: white;
+}
+.footer-links {
+    width: 50%;
+}
+.logos-footer{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.logos-footer img{
+    width: 100%;
+    max-width: 250px;
+    max-height: 70px;
 }
