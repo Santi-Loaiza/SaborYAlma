@@ -7,6 +7,7 @@
     <title>Sabor Y Alma</title>
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="icon" href="./IMAGES/LOGOS/IMG_2797.PNG">
+    <script src="./JS/index.js" async></script>
 </head>
 
 <body>
@@ -18,7 +19,10 @@
                     <img src="./IMAGES/LOGOS/IMG_2795.PNG" alt="Logo Corto en blanco" />
                 </a>
             </div>
-            <div class="nav-menu">
+            <div class="menu-icon" onclick="toggleMenu()">
+                ☰
+            </div>
+            <div class="nav-menu" id="nav-menu">
                 <ul>
                     <li><a href="./HTML/quienesSomos.html">¿Quienes somos?</a></li>
                     <li><a href="#reservar-mesa">Reservar mesa</a></li>
