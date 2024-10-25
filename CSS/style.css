@@ -456,3 +456,6 @@ footer p {
     height: 250px;
     object-fit: cover;
 }
+.navbar{
+    height: 140px;
+}
