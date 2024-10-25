@@ -11,7 +11,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}body {
+}
+
+body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -45,24 +47,25 @@ nav ul {
 
 @media (max-width: 795px) {
     .nav-menu {
-        display: none; 
-        flex-direction: column; 
+        display: none;
+        flex-direction: column;
         position: absolute;
         top: 100px;
         left: 0;
         background-color: rgba(0, 0, 0, 0.8);
         width: 100%;
-        text-align: center; 
-        padding: 10px 0;  
+        text-align: center;
+        padding: 10px 0;
     }
 
     .nav-menu.active {
-        display: flex; 
+        display: flex;
         justify-content: center;
         padding-top: 40px;
         padding-bottom: 30px;
     }
-    .nav-menu.active ul{
+
+    .nav-menu.active ul {
         display: flex;
         flex-direction: column;
         gap: 30px;
@@ -78,6 +81,7 @@ nav ul {
         display: flex;
     }
 }
+
 nav ul {
     list-style: none;
     display: flex;
@@ -433,15 +437,16 @@ footer p {
     max-height: 70px;
 }
 
-#contenedor-entradas{
+#contenedor-entradas {
     display: flex;
     align-items: center;
     margin: 0 auto;
     width: 90%;
     flex-wrap: wrap;
 }
+
 .item {
-    box-shadow:  0px 0px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     margin: 10px;
     padding: 10px;
@@ -450,30 +455,34 @@ footer p {
     height: 460px;
     text-align: center;
 }
+
 .item img {
     width: 100%;
     border-radius: 8px;
     height: 250px;
     object-fit: cover;
 }
-.navbar{
+
+.navbar {
     height: 140px;
 }
-.logo-largo{
-   height: 190px; 
+
+.logo-largo {
+    height: 190px;
 }
 
-.imagen-quienes-somos{
+.imagen-quienes-somos {
     background-image: url('/IMAGES/OTHERS/imagen-quienes-somos.jpg');
     background-position: center;
-    background-size: cover; 
+    background-size: cover;
     box-shadow: inset 1000px 1000px 1000px rgba(0, 0, 0, 0.5);
     height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#nuestra-historia{
+
+#nuestra-historia {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -482,7 +491,7 @@ footer p {
     background-color: black;
 }
 
-.historia-titulo{
+.historia-titulo {
     font-size: 2rem;
     display: flex;
     width: 50%;
@@ -492,7 +501,7 @@ footer p {
     margin-bottom: 10px;
 }
 
-.historia-parrafo1{
+.historia-parrafo1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -502,34 +511,38 @@ footer p {
     padding: 100px;
 }
 
-.historia-parrafo2{
-    
+.historia-parrafo2 {
+
     background-color: var(--fifth-color);
     color: white;
-   width: 50%;
-   height: 40%;
-   
-   padding: 0 100px 100px 100px;
-    }
-.historia-parrafo2-div{
+    width: 50%;
+    height: 40%;
+
+    padding: 0 100px 100px 100px;
+}
+
+.historia-parrafo2-div {
     display: flex;
     flex-direction: column;
-    position: relative;text-align: center;
-   justify-content: center;
-   align-items: center;
-   bottom: 50%;
-   gap: 60px;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    bottom: 50%;
+    gap: 60px;
 }
-.historia-parrafo2-div p{
+
+.historia-parrafo2-div p {
     font-size: 1.1rem;
 }
-.historia-parrafo2-div img{
+
+.historia-parrafo2-div img {
     position: relative;
     z-index: 1000;
     width: 100px;
 }
 
-.historia-parrafo3{
+.historia-parrafo3 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -541,15 +554,42 @@ footer p {
     text-align: center;
     font-weight: 600;
 }
-.historia-logo{
+
+.historia-logo {
     width: 100%;
     height: 20%;
-    padding: 10px; 
-    background-color: var(--primary-color); 
+    padding: 10px;
+    background-color: var(--primary-color);
     display: flex;
     justify-content: center;
     padding: 30px;
 }
-.historia-logo img{
+
+.historia-logo img {
     max-width: 500px;
+}
+
+.logo-ls {
+    width: 100%;
+    background-image: url('/IMAGES/OTHERS/imagen-relleno-quienes-somos.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 1000px 1000px 1000px rgba(0, 0, 0, 0.5);
+    height: 450px;
+}
+
+.logo-largo-s {
+    padding: 0px;
+    width: 39%;
+    margin: 0px;
+    align-items: center;
+}
+#enfoque-parrafo {
+    background-color: black;
+    padding: 100px;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
 }
