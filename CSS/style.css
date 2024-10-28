@@ -18,6 +18,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/*Pagina home*/
 nav {
     background-color: black;
     display: flex;
@@ -44,7 +45,7 @@ nav ul {
     gap: 1rem;
     margin-right: 40px;
 }
-
+/*Para poder aplicar el menu desplegable*/
 @media (max-width: 795px) {
     .nav-menu {
         display: none;
@@ -437,6 +438,12 @@ footer p {
     max-height: 70px;
 }
 
+/*subpagina menu*/
+.menu-title{
+    text-align: center;
+    margin: 20px;
+}
+
 #contenedor-entradas {
     display: flex;
     align-items: center;
@@ -463,6 +470,7 @@ footer p {
     object-fit: cover;
 }
 
+/*Subpagina quienes somos*/
 .navbar {
     height: 140px;
 }
