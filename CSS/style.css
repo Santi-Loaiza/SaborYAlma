@@ -439,15 +439,21 @@ footer p {
 }
 
 /*subpagina menu*/
+.menu-container{
+    text-align: center;
+}
+
 .menu-title{
     text-align: center;
     margin: 20px;
 }
 
-#contenedor-entradas {
+#contenedor-entradas,
+#contenedor-platosFuertes,
+#contenedor-postres{
     display: flex;
     align-items: center;
-    margin: 0 auto;
+    margin: 30px auto;
     width: 90%;
     flex-wrap: wrap;
 }
