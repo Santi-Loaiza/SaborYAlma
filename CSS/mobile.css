@@ -1,0 +1,169 @@
+.main-header-home img {
+    max-width: 300px;
+    max-height: 120px;
+}
+.main-header-home {
+    height: 52vh;
+}
+.main-section{
+    height: 150vh;
+}
+.main-section #div-1 ,
+.main-section #div-3{
+    min-width: 200px;
+}
+.main-section-left {
+    margin: 0 auto;
+    height: 70%;
+    width: 100%;
+}
+.main-section #div-2 {
+    width: 100%;
+    min-width: 200px;
+    max-width: 600px;
+    height: 30%;
+}
+.main-section #div-2 img {
+    max-width: 180px;
+    padding: 20px;
+}
+
+.main-section #div-4 a {
+    font-size: 0.95rem;
+    padding: 15px 20px;
+}
+#platos-destacados .flex-container {
+    gap: 10px;
+    width: 100%;
+}
+#platos-destacados h2 {
+    font-size: 1.5rem;
+}
+#platos-destacados .flex-container .plato {
+    max-width: 130px;
+    font-size: 0.8rem;
+    padding: 5px 5px 25px 5px;
+}
+#platos-destacados .flex-container .plato .plato-img1,
+#platos-destacados .flex-container .plato .plato-img2,
+#platos-destacados .flex-container .plato .plato-img3,
+#platos-destacados .flex-container .plato .plato-img4 {
+    width: 110px;
+    height: 110px;
+    margin: 4px 4px 15px 4px;
+}
+#platos-destacados .boton-menu a {
+    padding: 15px 25px 15px 25px;
+    font-size: 0.95rem;
+}
+#reseñas-y-horarios {
+    max-width: 100%;
+    height: 160vh;
+}
+#reseñas-y-horarios .reseñas {
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+}
+#reseñas-y-horarios .reseñas h2{
+    font-size: 1.3rem;
+}
+#reseñas-y-horarios .reseñas .reseña {
+    max-width: 250px;
+    padding: 20px;
+}
+.horario-reservas {
+    padding: 30px;
+    width: 100%;
+    min-width: 100px;
+}
+.tabla-horarios {
+    width: 85%;
+    height: 80%;
+    padding: 8px 15px;
+    margin: auto;
+}
+.tabla-horarios tr #dia-semana {
+    font-size: 1rem;
+}
+.tabla-horarios tr {
+   font-size: 0.8rem;
+}
+.boton-reservar {
+    background-color: var(--fourth-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 45%;
+    margin: 25px;
+    font-size: 1.1rem;
+}
+.logo-relleno{
+    height: 30vh;
+}
+.logos-footer {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.logos-footer img {
+    width: 100%;
+    max-width: 150px;
+    max-height: 50px;
+    margin: 5px;
+}
+
+/*Subpagina menu*/
+
+
+#contenedor-entradas,
+#contenedor-platosFuertes,
+#contenedor-postres{
+   margin: 10px auto;
+}
+.item {
+    width: 140px;
+    height: 390px;
+    font-size: 0.8rem;
+}
+
+.item img {
+    height: 150px;
+}
+
+/*Subpagina quienes somos*/
+.imagen-quienes-somos {
+    height: 60vh;
+}
+.logo-largo {
+    height: 100px;
+}
+
+#nuestra-historia {
+   height: 1400px;
+}
+.historia-titulo,
+.historia-logo{
+    height: 12.5%;
+    text-align: center;
+    width: 100%;
+    font-size: 1.4rem;
+}
+.historia-parrafo1,
+.historia-parrafo2,
+.historia-parrafo3 {
+    display: flex;
+    width: 100%;
+    height: 25%;
+    font-size: 1.2rem;
+    padding: 40px;
+}
+.historia-parrafo2-div img{
+    display: none;
+}
+.historia-parrafo2-div {
+    position: none;
+    bottom: 0;
+    gap: 0;
+}
