@@ -635,3 +635,104 @@ footer p {
     font-size: 2rem;
     color: var(--third-color);
 }
+
+/*Pagina Registrar*/
+.flex-registro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+}
+.left-flex-registro{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.right-flex-registro{
+    width: 40%;
+    background-image: url('../IMAGES/OTHERS/Registrar-imagen.jpg');
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 1000px 1000px 1000px rgba(0, 0, 0, 0.4);
+}
+.registro-formulario form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 95%;
+    padding: 80px;
+    flex-wrap: wrap;
+}
+.registro-formulario form input{
+    margin-bottom: 45px;
+    padding: 15px;
+    width: 45%;
+box-shadow: 0 0px 10px var(--third-color); 
+    border: none;
+    font-weight: bold;
+}
+#terminos{
+    width: 10px;
+    margin-right: 10px;
+}
+.registro-titulo{
+   font-size: 25px;
+}
+
+.terminos-registro{
+    font-size: 0.9rem; 
+    width: 100%;
+}
+
+.subrayado-rojo{
+    color: var(--primary-color);
+}
+.flex-div-form-registro-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.flex-div-form-registro-bottom p{
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 0 30px;
+}
+.boton-registro{
+    margin: 0 30px;
+    display: flex;
+    justify-content: center;
+}
+.Btn-registro{
+    color: white;
+    background-color: black;
+    border-radius: 10px ;
+    width: 150px;
+    height: 45px;
+    font-weight: bold;
+}
+
+.subrayado-verde{
+    color: var(--fourth-color);
+}
+
+.container-lgoverde{
+    background-color: var(--third-color);
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo-v{
+    height: 80%;
+}

@@ -14,30 +14,44 @@
     <nav class="navbar">
         <li class="nav-logo">
             <a href="../index.html" >
-                <img src="../IMAGES/LOGOS/IMG_2795.PNG" alt="Logo corto en blanco">
+                <img src="../IMAGES/LOGOS/IMG_2795.PNG" alt="Logo corto en blanco" class="logo-cblanco">
             </a>
         </li>
     </nav>
     <main>
-        <div class="registro-titulo">
+        <div class="flex-registro">
+            <section class="left-flex-registro"><div class="registro-titulo">
             <h2>Crea tu cuenta</h2>
         </div>
         <div class="registro-formulario">
             <form >
-                <input type="text" id="nombres" name="nombres" placeholder="Nombres" required>
-                <input type="text" id="usuario-email" name="usuario-email" placeholder="Usuario o email" required>
-                <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
-                <input type="password" id="contraseña" name="contraseña" placeholder="contraseña" required>
-                <div>
+                <input type="text" id="nombres" name="nombres" placeholder="Nombres" required class="nom-registro">
+                <input type="text" id="usuario-email" name="usuario-email" placeholder="Usuario o email" required required class="apell-registro">
+                <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required class="U-ema">
+                <input type="password" id="contraseña" name="contraseña" placeholder="contraseña" required class="con-registro">
+                <div class="terminos-registro">
                     <input type="checkbox" id="terminos" name="terminos" required>
-                    <label for="terminos">He leído los términos y condiciones de uso y la politica de privacidad.</label>
+                    <label for="terminos">
+                        He leído los <span class="subrayado-rojo">términos y condiciones de uso</span> y la <span class="subrayado-rojo">política de privacidad</span>.</label>
                 </div>
-                <button type="submit" id="registrarBtn">Registrarse</button>
+                <div class="flex-div-form-registro-bottom">
+                    <div class="boton-registro">
+                    <button type="submit" class="Btn-registro" id="registrarBtn">Registrarse</button>
+                </div>
             </form>
             <p>¿Ya tienes una cuenta? <a href="#iniciar-sesion">Inicia sesión aquí</a>.</p>
+                </div>
+                
         </div>
-        <div>
+            </section>
+        
+        <div class="right-flex-registro">
             <!--Aqui poner de background-image: url('') desde css la imagen <img src="../IMAGES/OTHERS/Registrar-imagen.jpg" alt="">-->
+        </div>
+        </div>
+        
+        <div class="container-lgoverde">
+            <img src="../IMAGES/LOGOS/IMG_2796.PNG" alt="logo verde" class="logo-v">
         </div>
     </main>
 
