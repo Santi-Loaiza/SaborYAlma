@@ -605,3 +605,33 @@ footer p {
     font-weight: 400;
     text-align: center;
 }
+
+/*Pagina temporal de cerrar sesion*/
+#cerrarSesionBtn{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#cerrarSesionBtn:hover{
+    background-color: var(--primary-color);
+}
+.main-paginaTemporal{
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-paginaTemporal h1{
+    font-size: 4rem;
+}
+.main-paginaTemporal h3{
+    font-size: 2rem;
+    color: var(--third-color);
+}

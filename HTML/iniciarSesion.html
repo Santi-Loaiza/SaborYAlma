@@ -7,6 +7,7 @@
     <title>Iniciar sesion</title>
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="icon" href="/IMAGES/LOGOS/IMG_2797.PNG">
+    <script src="../JS/registro.js" async></script>
 </head>
 
 <body>
@@ -20,9 +21,9 @@
     <main>
         <img src="../IMAGES/LOGOS/IMG_2803.PNG" alt="">
         <form action="">
-            <input type="text" placeholder="usuario o email" id="email" name="email" required>
-            <input type="password" placeholder="Contraseña">
-            <button type="submit">Iniciar sesion</button> 
+            <input type="text" placeholder="usuario o email" id="loginUsuario" name="email" required>
+            <input type="password" id="loginContraseña" placeholder="contraseña">
+            <button type="submit" id="iniciarSesionBtn">Iniciar sesion</button> 
             <div class="texto adicional">
             <p>¿Olvidaste tu Contraseña?</p><a href="#"> Da click aquí</a>
             <a href="#">¿No te has registrado?</a>
