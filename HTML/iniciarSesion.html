@@ -19,18 +19,30 @@
         </li>
     </nav>
     <main>
-        <img src="../IMAGES/LOGOS/IMG_2803.PNG" alt="">
+        <div class="flex-iniciarSesion">
+            <section class="flex-iniciarSesion_left">
+            <img src="../IMAGES/LOGOS/IMG_2803.PNG" alt="logo negro largo" class="logo-negro">
         <form action="">
-            <input type="text" placeholder="usuario o email" id="loginUsuario" name="email" required>
-            <input type="password" id="loginContraseña" placeholder="contraseña">
-            <button type="submit" id="iniciarSesionBtn">Iniciar sesion</button> 
-            <div class="texto adicional">
-            <p>¿Olvidaste tu Contraseña?</p><a href="#"> Da click aquí</a>
-            <a href="#">¿No te has registrado?</a>
+            <input type="text" placeholder="Usuario o email" id="loginUsuario" name="email" required class="email-inicio">
+            <div class="contraseña-login-flex">
+                <input type="password" id="loginContraseña" placeholder="Contraseña" class="contraseña-inicio">
+                <p>¿Olvidaste tu Contraseña?   <a href="#"> <span class="subray-rojo"> Click aquí</span></a></p>
+            </div>
+            <button type="submit" id="iniciarSesionBtn" class="btn-inicio">Iniciar sesion</button> 
+            <div class="texto-adicional">
+    
+                </form>
+                <div class="registrate">
+                    <p>¿No has creado tu cuenta aun?</p>
+                    <a href="./registrar.html"> <span class="subray-verde"> Registrate aqui</span>
         </div>
-        </form>
-        <div>
-           <!--Aqui poner de background-image: url('') desde css la imagen <img src="../IMAGES/OTHERS/Login-imagen.jpg" alt="">-->
+        </section>
+        <div class="flex-iniciarSesion_right">
+        </div>
+        </div>
+        
+        <div class="container-logo-iniciarSesion">
+            <img src="../IMAGES/LOGOS/IMG_2797.PNG" alt="logo verde" class="logo-v">
         </div>
     </main>
     <footer>

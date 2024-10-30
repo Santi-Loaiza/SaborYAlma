@@ -724,15 +724,97 @@ box-shadow: 0 0px 10px var(--third-color);
     color: var(--fourth-color);
 }
 
-.container-lgoverde{
-    background-color: var(--third-color);
+.container-lgoverde,
+.container-logo-iniciarSesion{
     height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-
+.container-lgoverde{
+    background-color: var(--third-color);
+}
+.container-logo-iniciarSesion{
+    background-color: var(--second-color);
+}
 .logo-v{
     height: 80%;
+}
+
+/*Pagina iniciar sesion*/
+.flex-iniciarSesion{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80vh;
+}
+
+.flex-iniciarSesion_left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.flex-iniciarSesion_right{
+    background-image: url('../IMAGES/OTHERS/Login-imagen.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%; 
+    width: 50vw;
+    background-repeat: no-repeat;
+    box-shadow: inset 1000px 1000px 1000px rgba(0, 0, 0, 0.4);
+}
+.flex-iniciarSesion_left form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 50%;
+    margin: 30px;
+}
+.flex-iniciarSesion_left a{
+    text-decoration: none;
+}
+.flex-iniciarSesion_left a:hover{
+    color: var(--third-color);
+}
+.logo-negro{
+    width: 340px;
+}
+
+.email-inicio,
+.contraseña-inicio{
+    font-weight: bold;
+    padding: 10px;
+    box-shadow: 0 0px 10px var(--third-color); 
+    border: none;
+    width: 100%;
+    height: 55px;
+}
+.contraseña-login-flex{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 100%;
+}
+.registrate{
+    display: flex;
+    font-size: 0.9rem;
+    gap: 10px;
+}
+.btn-inicio{
+    color: white;
+    background-color: black;
+    border-radius: 10px ;
+    width: 50%;
+    height: 50px;
+    font-weight: bold;   
+}
+.subray-rojo{
+    color: var(--primary-color);
+}
+.subray-verde{
+    color: var(--fourth-color);
 }
