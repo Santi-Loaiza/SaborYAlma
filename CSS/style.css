@@ -164,6 +164,7 @@ nav ul li a:hover {
     height: 100%;
     align-content: center;
     width: 40%;
+    overflow: hidden;
 }
 
 .main-section #div-2 img {
