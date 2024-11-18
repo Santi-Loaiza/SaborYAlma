@@ -1,3 +1,9 @@
+.nav-logo img {
+    max-width: 40px;
+}
+.navbar{
+    height: 100px;
+}
 .main-header-home img {
     max-width: 300px;
     max-height: 120px;
@@ -173,4 +179,74 @@
 #enfoque-parrafo{
     font-size: 1.2rem;
     padding: 50px;
+}
+.flex-iniciarSesion,
+.flex-registro{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.flex-iniciarSesion_left,
+.left-flex-registro
+{
+    width: 100%;
+    height: 40%;
+}
+.flex-iniciarSesion_right{
+    width: 100%;
+    height: 40%;
+}
+.logo-negro {
+    width: 250px;
+}
+.email-inicio,
+.contraseña-inicio{
+    height: 45px;
+}
+.flex-iniciarSesion_left form{
+    width: 70%;
+}
+.contraseña-login-flex{
+    font-size: 0.75rem;
+}
+.registrate{
+    font-size: 0.75rem;
+    gap: 5px;
+}
+.right-flex-registro,
+.flex-iniciarSesion_right{
+    display: none;
+}
+.registro-formulario form{
+    width: 100%;
+    justify-content: center;
+    padding: 30px;
+}
+.registro-formulario form input{
+    margin-bottom: 30px;
+    padding: 15px;
+    width: 70%;
+    box-shadow: 0 0px 8px var(--third-color); 
+    border: none;
+    font-weight: bold;
+}
+.flex-registro{
+    height: 700px;
+    width: 100vw;
+}
+.registro-titulo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+.flex-div-form-registro-bottom {
+    margin-top: 30px;
+}
+.flex-div-form-registro-bottom p {
+    font-size: 0.85rem;
+    margin: auto;
+}
+.flex-div-form-registro-bottom{
+    flex-direction: column;
+    gap: 20px;
 }
