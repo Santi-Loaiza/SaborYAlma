@@ -62,6 +62,7 @@
     width: 100%;
     padding: 20px;
     gap: 20px;
+    min-width: 100px;
 }
 #reseñas-y-horarios .reseñas h2{
     font-size: 1.3rem;
