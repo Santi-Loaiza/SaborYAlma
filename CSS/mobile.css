@@ -6,25 +6,23 @@
     height: 52vh;
 }
 .main-section{
-    height: 150vh;
+    height: 1150px;
 }
 .main-section #div-1 ,
 .main-section #div-3{
     min-width: 200px;
 }
-.main-section-left {
+#main-section-left {
     margin: 0 auto;
     height: 70%;
     width: 100%;
 }
 .main-section #div-2 {
     width: 100%;
-    min-width: 200px;
-    max-width: 600px;
-    height: 30%;
+    height: 330px;
 }
 .main-section #div-2 img {
-    max-width: 180px;
+    max-width: 200px;
     padding: 20px;
 }
 
@@ -156,7 +154,7 @@
     display: flex;
     width: 100%;
     height: 25%;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 40px;
 }
 .historia-parrafo2-div img{
@@ -166,4 +164,12 @@
     position: none;
     bottom: 0;
     gap: 0;
+}
+.historia-logo img {
+    max-width: 340px;
+}
+
+#enfoque-parrafo{
+    font-size: 1.2rem;
+    padding: 50px;
 }
