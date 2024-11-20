@@ -968,51 +968,55 @@ body.modal-open {
     font-size: 2rem;
 }
 
-#detallesPedido{
+#detallesPedido {
     text-align: center;
 }
+
 #detallesPedido div {
     margin-bottom: 10px;
     margin-top: 10px;
 }
+
 #detallesPedido h2 {
     font-size: 2rem;
 }
-.main-detallesPedido{
+
+.main-detallesPedido {
     padding: 80px;
 }
 
 #modalDireccion {
-    display: none; 
-    position: fixed; 
-    left: 0; 
-    top: 0; 
-    width: 100%; 
-    height: 100%; 
-    background-color: rgba(0,0,0,0.5); 
-    color: black; 
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
     padding: 20px;
     box-sizing: border-box;
 }
+
 .modal-content {
-    background-color: white; 
-    margin: 15% auto; 
-    padding: 20px; 
-    border: 1px solid #888; 
-    width: 80%; 
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
     max-width: 500px;
 }
 
-#mensajeCarga {
-    display: none;
-    text-align: center;
-    font-size: 1.5rem;
-    margin-top: 20px;
-}
+#mensajeCarga,
 #mensajeExito {
     display: none;
     text-align: center;
     font-size: 1.5rem;
-    color: green;
     margin-top: 20px;
+}
+
+.direccion-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
 }
