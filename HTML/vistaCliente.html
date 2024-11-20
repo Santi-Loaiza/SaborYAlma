@@ -7,7 +7,7 @@
     <link rel="icon" href="/IMAGES/LOGOS/IMG_2797.PNG">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/mobile.css" media="(max-width: 599px)">
-    <script src="../JS/registro.js" async></script>
+    <script src="../JS/usuarios.js" async></script>
 </head>
 <body>
     <nav class="navbar">
@@ -16,9 +16,20 @@
         </li>
     </nav>
     <main class="main-paginaTemporal">
-        <h1>Bienvenido a la vista de Usuario!</h1>
-        <h3>Lastimosamente no hemos integrado aun nada aquí.</h3>
-        <h4>Te invitamos a cerrar sesion en el boton superior izquierdo</h4>
+
+        <h1 id="welcomeMessage"></h1>
+        <h3>Comienza a realizar tu pedido!</h3>
+        <h1 class="menu-title">Lista de Platos</h1>
+        <div class="menu-container">
+            <h2>Entradas / Starters</h2>
+            <div id="contenedor-entradas"></div>
+            <h2>Platos Fuertes / Main Course</h2>
+            <div id="contenedor-platosFuertes"></div>
+            <h2>Postres / Desserts</h2>
+            <div id="contenedor-postres"></div>
+        </div>
+        <aside id="carrito">
+        </aside>
     </main>
 </body>
 </html>

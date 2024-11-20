@@ -7,7 +7,7 @@
     <title>Registrar</title>
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="icon" href="/IMAGES/LOGOS/IMG_2797.PNG">
-    <script src="../JS/registro.js" async></script>
+    <script src="../JS/usuarios.js" async></script>
     <link rel="stylesheet" href="../CSS/mobile.css" media="(max-width: 599px)">
 </head>
 
@@ -29,7 +29,11 @@
                 <input type="text" id="nombres" name="nombres" placeholder="Nombres" required class="nom-registro">
                 <input type="text" id="usuario-email" name="usuario-email" placeholder="Usuario o email" required required class="apell-registro">
                 <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required class="U-ema">
-                <input type="password" id="contraseña" name="contraseña" placeholder="contraseña" required class="con-registro">
+                <div class="contraseña-container">
+                    <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" required class="con-registro">
+                    <button type="button" id="togglePassword">Ver</button>
+                </div>
+                
                 <div class="terminos-registro">
                     <input type="checkbox" id="terminos" name="terminos" required>
                     <label for="terminos">

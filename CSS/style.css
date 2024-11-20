@@ -45,6 +45,7 @@ nav ul {
     gap: 1rem;
     margin-right: 40px;
 }
+
 /*Para poder aplicar el menu desplegable*/
 @media (max-width: 795px) {
     .nav-menu {
@@ -438,18 +439,18 @@ footer p {
 }
 
 /*subpagina menu*/
-.menu-container{
+.menu-container {
     text-align: center;
 }
 
-.menu-title{
+.menu-title {
     text-align: center;
     margin: 20px;
 }
 
 #contenedor-entradas,
 #contenedor-platosFuertes,
-#contenedor-postres{
+#contenedor-postres {
     display: flex;
     align-items: center;
     margin: 30px auto;
@@ -597,6 +598,7 @@ footer p {
     margin: 0px;
     align-items: center;
 }
+
 #enfoque-parrafo {
     background-color: black;
     padding: 100px;
@@ -608,7 +610,7 @@ footer p {
 }
 
 /*Pagina temporal de cerrar sesion*/
-#cerrarSesionBtn{
+#cerrarSesionBtn {
     background-color: transparent;
     border: none;
     color: white;
@@ -617,10 +619,12 @@ footer p {
     cursor: pointer;
     border-radius: 5px;
 }
-#cerrarSesionBtn:hover{
+
+#cerrarSesionBtn:hover {
     background-color: var(--primary-color);
 }
-.main-paginaTemporal{
+
+.main-paginaTemporal {
     padding: 100px;
     display: flex;
     flex-direction: column;
@@ -629,23 +633,25 @@ footer p {
     align-items: center;
 }
 
-.main-paginaTemporal h1{
+.main-paginaTemporal h1 {
     font-size: 4rem;
 }
-.main-paginaTemporal h3{
+
+.main-paginaTemporal h3 {
     font-size: 2rem;
     color: var(--third-color);
 }
 
 /*Pagina Registrar*/
-.flex-registro{
+.flex-registro {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 600px;
 }
-.left-flex-registro{
+
+.left-flex-registro {
     width: 60%;
     height: 100%;
     display: flex;
@@ -653,7 +659,8 @@ footer p {
     justify-content: center;
     align-items: center;
 }
-.right-flex-registro{
+
+.right-flex-registro {
     width: 40%;
     background-image: url('../IMAGES/OTHERS/Registrar-imagen.jpg');
     height: 100%;
@@ -662,7 +669,8 @@ footer p {
     background-repeat: no-repeat;
     box-shadow: inset 1000px 1000px 1000px rgba(0, 0, 0, 0.4);
 }
-.registro-formulario form{
+
+.registro-formulario form {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -672,101 +680,140 @@ footer p {
     padding: 80px;
     flex-wrap: wrap;
 }
-.registro-formulario form input{
+
+.registro-formulario form input {
     margin-bottom: 45px;
     padding: 15px;
     width: 45%;
-    box-shadow: 0 0px 10px var(--third-color); 
+    box-shadow: 0 0px 10px var(--third-color);
     border: none;
     font-weight: bold;
 }
-#terminos{
+
+.contraseña-container {
+    width: 45%;
+    box-shadow: 0 0px 10px var(--third-color);
+    height: 45px;
+    margin-bottom: 45px;
+    display: inline-block;
+}
+
+form .contraseña-container input {
+    box-shadow: none;
+    width: 65%;
+}
+
+.con-registro {
+    padding-right: 500px;
+    font-size: 0.8rem;
+}
+
+#togglePassword {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--fifth-color);
+    font-size: 0.7rem;
+
+}
+
+#terminos {
     width: 10px;
     margin-right: 10px;
 }
-.registro-titulo{
-   font-size: 25px;
+
+.registro-titulo {
+    font-size: 25px;
 }
 
-.terminos-registro{
-    font-size: 0.9rem; 
+.terminos-registro {
+    font-size: 0.9rem;
     width: 100%;
 }
 
-.subrayado-rojo{
+.subrayado-rojo {
     color: var(--primary-color);
 }
-.flex-div-form-registro-bottom{
+
+.flex-div-form-registro-bottom {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
 }
-.flex-div-form-registro-bottom p{
+
+.flex-div-form-registro-bottom p {
     font-size: 0.9rem;
     text-align: center;
     margin: 0 30px;
 }
-.boton-registro{
+
+.boton-registro {
     margin: 0 30px;
     display: flex;
     justify-content: center;
 }
-.Btn-registro{
+
+.Btn-registro {
     color: white;
     background-color: black;
-    border-radius: 10px ;
+    border-radius: 10px;
     width: 150px;
     height: 45px;
     font-weight: bold;
 }
 
-.subrayado-verde{
+.subrayado-verde {
     color: var(--fourth-color);
 }
 
 .container-lgoverde,
-.container-logo-iniciarSesion{
+.container-logo-iniciarSesion {
     height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.container-lgoverde{
+
+.container-lgoverde {
     background-color: var(--third-color);
 }
-.container-logo-iniciarSesion{
+
+.container-logo-iniciarSesion {
     background-color: var(--second-color);
 }
-.logo-v{
+
+.logo-v {
     height: 80%;
 }
 
 /*Pagina iniciar sesion*/
-.flex-iniciarSesion{
+.flex-iniciarSesion {
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 600px;
 }
 
-.flex-iniciarSesion_left{
+.flex-iniciarSesion_left {
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.flex-iniciarSesion_right{
+
+.flex-iniciarSesion_right {
     background-image: url('../IMAGES/OTHERS/Login-imagen.jpg');
     background-size: cover;
     background-position: center;
-    height: 100%; 
+    height: 100%;
     width: 50vw;
     background-repeat: no-repeat;
     box-shadow: inset 1000px 1000px 1000px rgba(0, 0, 0, 0.4);
 }
-.flex-iniciarSesion_left form{
+
+.flex-iniciarSesion_left form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -775,47 +822,197 @@ footer p {
     width: 50%;
     margin: 30px;
 }
-.flex-iniciarSesion_left a{
+
+.flex-iniciarSesion_left a {
     text-decoration: none;
 }
-.flex-iniciarSesion_left a:hover{
+
+.flex-iniciarSesion_left a:hover {
     color: var(--third-color);
 }
-.logo-negro{
+
+.logo-negro {
     width: 340px;
 }
 
 .email-inicio,
-.contraseña-inicio{
+.contraseña-inicio {
     font-weight: bold;
     padding: 10px;
-    box-shadow: 0 0px 10px var(--third-color); 
+    box-shadow: 0 0px 10px var(--third-color);
     border: none;
     width: 100%;
     height: 55px;
 }
-.contraseña-login-flex{
+
+.contraseña-login-flex {
     display: flex;
     gap: 10px;
     flex-direction: column;
     width: 100%;
 }
-.registrate{
+
+.registrate {
     display: flex;
     font-size: 0.9rem;
     gap: 10px;
 }
-.btn-inicio{
+
+.btn-inicio {
     color: white;
     background-color: black;
-    border-radius: 10px ;
+    border-radius: 10px;
     width: 50%;
     height: 50px;
-    font-weight: bold;   
+    font-weight: bold;
 }
-.subray-rojo{
+
+.subray-rojo {
     color: var(--primary-color);
 }
-.subray-verde{
+
+.subray-verde {
     color: var(--fourth-color);
+}
+
+/*Pagina de vista de cliente*/
+
+#carrito {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.766);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#carrito h2 {
+    font-size: 1.5rem;
+    padding: 10px 0px;
+}
+
+#carrito div {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#carrito div button {
+    background-color: var(--third-color);
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+#carrito div button:hover {
+    background-color: var(--primary-color);
+}
+
+#carrito div button:active {
+    background-color: var(--fourth-color);
+}
+
+body.modal-open {
+    overflow: hidden;
+    /* Evitar el desplazamiento de la página cuando el modal está abierto */
+}
+
+.modal {
+    display: none;
+    /* Ocultar el modal por defecto */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semi-transparente */
+    z-index: 1000;
+    /* Asegurarse de que el modal esté por encima del contenido */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    /* Centrar el modal */
+    padding: 20px;
+    width: 300px;
+    /* Ancho del modal */
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.close-button {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+}
+
+#paginaEspera {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+#detallesPedido{
+    text-align: center;
+}
+#detallesPedido div {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#detallesPedido h2 {
+    font-size: 2rem;
+}
+.main-detallesPedido{
+    padding: 80px;
+}
+
+#modalDireccion {
+    display: none; 
+    position: fixed; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.5); 
+    color: black; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+.modal-content {
+    background-color: white; 
+    margin: 15% auto; 
+    padding: 20px; 
+    border: 1px solid #888; 
+    width: 80%; 
+    max-width: 500px;
+}
+
+#mensajeCarga {
+    display: none;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+#mensajeExito {
+    display: none;
+    text-align: center;
+    font-size: 1.5rem;
+    color: green;
+    margin-top: 20px;
 }
