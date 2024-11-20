@@ -3,8 +3,10 @@ const direcciones = JSON.parse(localStorage.getItem('direcciones')) || [];
 
 let costoProductos = 0;
 let direccionSeleccionada = '';
+let totalPlatos = 0
 
-detallesPedido.forEach(producto => {
+detallesPedido.forEach(producto => { 
+    totalPlatos += producto.cantidad; 
     costoProductos += producto.precio * producto.cantidad;
 
     document.getElementById('detallesPedido').innerHTML += `
@@ -118,6 +120,19 @@ function finalizarPedidoDesdeModal() {
     document.getElementById('detallesPedido').innerHTML += `<h4>Tarifa de servicio: $${tarifaServicio}</h4>`;
     document.getElementById('detallesPedido').innerHTML += `<h2>Total: $${total}</h2>`;
 
+    //Tiempo estimado de entrega
+   
+    let tiempoEstimado = (totalPlatos * 4) + 20;
+    let tiempoEstimadoString = `${tiempoEstimado} minutos` 
+    if(tiempoEstimado > 60){
+        tiempoEstimado = tiempoEstimado / 60;
+        tiempoEstimadoString = `${tiempoEstimado} horas`
+        if(tiempoEstimado > 1.6){
+            tiempoEstimado = 1.6
+            tiempoEstimadoString = `${tiempoEstimado} horas`
+        }
+    }
+
     setTimeout(() => {
         // Mostrar mensaje de éxito
         document.getElementById('detallesPedido').innerHTML = `
@@ -139,6 +154,7 @@ function finalizarPedidoDesdeModal() {
         document.getElementById('detallesPedidoFinal').innerHTML += `<h4>Tarifa de domicilio: $${tarifaDomicilio}</h4>`;
         document.getElementById('detallesPedidoFinal').innerHTML += `<h4>Tarifa de servicio: $${tarifaServicio}</h4>`;
         document.getElementById('detallesPedidoFinal').innerHTML += `<h2>Total: $${total}</h2>`;
+        document.getElementById('detallesPedidoFinal').innerHTML += `<h2>Tiempo estimado: ${tiempoEstimadoString}</h2>`;
 
         cerrarModal(); 
     }, 3000);
