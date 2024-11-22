@@ -24,7 +24,11 @@ document.getElementById('registrarBtn')?.addEventListener('click', function(even
 
     // Guardar el nuevo usuario en el objeto
     if (nuevoUsuario && nuevoContraseña && nombre && apellido) {
-        usuarios[nuevoUsuario] = {
+        const contenedorPrincipalRegistro = document.getElementById('main-container-registro') 
+        contenedorPrincipalRegistro.innerHTML = `<h1 style="color: white;">Cargando...</h1>`
+        setTimeout(
+            () =>{
+                usuarios[nuevoUsuario] = {
             contraseña: nuevoContraseña,
             nombre: nombre,
             apellido: apellido
@@ -32,6 +36,7 @@ document.getElementById('registrarBtn')?.addEventListener('click', function(even
         localStorage.setItem('usuarios', JSON.stringify(usuarios)); // Guardar en localStorage
         alert('Usuario registrado con éxito');
         window.location.href = "../HTML/iniciarSesion.html";
+            }, 3000    )
     } else {
         alert('Por favor ingrese todos los campos');
     }
@@ -63,11 +68,17 @@ document.getElementById('iniciarSesionBtn')?.addEventListener('click', function(
 
     // Verificar las credenciales
     if (usuarios[usuario] && usuarios[usuario].contraseña === contraseña) {
-        sessionStorage.setItem('sesionActiva', true);
+        const contenedorPrincipalIniciarSesion = document.getElementById('main-container-iniciarSesion');
+        contenedorPrincipalIniciarSesion.innerHTML = `<h1 style="color: white;">Cargando...</h1>`
+        setTimeout(
+            () =>{
+                sessionStorage.setItem('sesionActiva', true);
         sessionStorage.setItem('nombre', usuarios[usuario].nombre); // Guardar nombre en sessionStorage
         sessionStorage.setItem('apellido', usuarios[usuario].apellido); // Guardar apellido en sessionStorage
         alert('Sesión iniciada con éxito');
         window.location.href = "../HTML/vistaCliente.html";
+            }, 3000)
+        
     } else {
         alert('Usuario o contraseña incorrectos');
     }
@@ -87,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const apellido = sessionStorage.getItem('apellido');
 
     if (nombre && apellido) {
-        document.getElementById('welcomeMessage').textContent = `¡Bienvenido, ${nombre} ${apellido}!`;
+        document.getElementById('welcomeMessage').textContent = `¡Bienvenid@, ${nombre} ${apellido}!`;
     } else {
         document.getElementById('welcomeMessage').textContent = '¡Bienvenido!';
     }

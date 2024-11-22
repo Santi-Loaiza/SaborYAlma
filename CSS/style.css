@@ -786,6 +786,13 @@ form .contraseña-container input {
 .logo-v {
     height: 80%;
 }
+#main-container-registro,
+#main-container-iniciarSesion {
+    height: 80vh;
+    text-align: center;
+    align-content: center;
+}
+
 
 /*Pagina iniciar sesion*/
 .flex-iniciarSesion {
@@ -876,7 +883,45 @@ form .contraseña-container input {
 }
 
 /*Pagina de vista de cliente*/
+.main-paginaTemporal{
+    text-align: center;
+    background-image: url(../IMAGES/OTHERS/home-main-header.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 1000px 1000px 1000px rgba(0, 0, 0, 0.5);
+}
+#welcomeMessage{
+    font-size: 4rem;
+    color: white;
+}
+#divMain-vistaCliente{
+    display: flex;
+   height: 40vh;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+#divMain-vistaCliente button{
+    padding: 30px;
+    font-size: 2rem;
+    border: var(--third-color);
+    border-radius: 10px;
+}
+#divMain-vistaCliente button:hover{
+    background-color: var(--fifth-color);
+    color: white
+}
+#divMain-vistaCliente button:active{
+    background-color: var(--fourth-color);
+}
 
+#regresar-a{
+    color: #ffffff;
+    text-decoration: none;
+}
+#regresar-a:hover{
+    color: var(--third-color);
+}
 #carrito {
     position: fixed;
     top: 10px;
@@ -916,30 +961,25 @@ form .contraseña-container input {
 
 body.modal-open {
     overflow: hidden;
-    /* Evitar el desplazamiento de la página cuando el modal está abierto */
+    
 }
 
-.modal {
+.modalDireccion{
     display: none;
-    /* Ocultar el modal por defecto */
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Fondo semi-transparente */
     z-index: 1000;
-    /* Asegurarse de que el modal esté por encima del contenido */
 }
 
 .modal-content {
     background-color: white;
     margin: 15% auto;
-    /* Centrar el modal */
     padding: 20px;
     width: 300px;
-    /* Ancho del modal */
     position: relative;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 8px;

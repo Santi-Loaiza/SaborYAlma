@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,27 +10,69 @@
     <link rel="stylesheet" href="../CSS/mobile.css" media="(max-width: 599px)">
     <script src="../JS/usuarios.js" async></script>
 </head>
+
 <body>
     <nav class="navbar">
         <li class="nav-logo">
-           <button id="cerrarSesionBtn"><p>Cerrar sesion aquí</p></button>
+            <button id="cerrarSesionBtn">
+                <p>Cerrar sesion aquí</p>
+            </button>
         </li>
     </nav>
     <main class="main-paginaTemporal">
+        <div>
+            <h1 id="welcomeMessage"></h1>
+            <h3>¿Que deseas hacer hoy?</h3>
+            <div id="divMain-vistaCliente">
+                <section>
+                <button onclick="redireccionarRealizarPedido()" class="redireccionarRealizarPedido">
+                    Realizar Pedido
+                </button>
 
-        <h1 id="welcomeMessage"></h1>
-        <h3>Comienza a realizar tu pedido!</h3>
-        <h1 class="menu-title">Lista de Platos</h1>
-        <div class="menu-container">
-            <h2>Entradas / Starters</h2>
-            <div id="contenedor-entradas"></div>
-            <h2>Platos Fuertes / Main Course</h2>
-            <div id="contenedor-platosFuertes"></div>
-            <h2>Postres / Desserts</h2>
-            <div id="contenedor-postres"></div>
+            </section>
+            <section>
+                <button>Realizar reserva</button>
+            </section>
+            </div>
+            
         </div>
-        <aside id="carrito">
-        </aside>
+        <script>
+            function redireccionarRealizarPedido() {
+                const contenedorPrincipalVistaCliente = document.getElementById('divMain-vistaCliente')
+                contenedorPrincipalVistaCliente.innerHTML = '<h1 style=" height: 60vh; text-align: center; align-content: center; color: white;">Cargando menú...</h1>'
+                setTimeout(() => {
+                    window.location.href = '../HTML/realizarPedido.html';
+                }, 1500)
+            }
+        </script>
     </main>
+
+    <footer>
+        <div class="footer-info">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#terminos-y-condiciones">Términos y condiciones de uso</a></li>
+                    <li><a href="#politica-de-privacidad">Política de privacidad</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="logos-footer">
+                <div class="logo-largo-footer">
+                    <img src="../IMAGES/LOGOS/IMG_2802.PNG" alt="">
+                </div>
+                <div class="logo-corto-footer">
+                    <a href="">
+                        <img src="../IMAGES/LOGOS/IMG_2795.PNG" alt="Logo Corto" />
+                    </a>
+                </div>
+                <div class="footer-copyright">
+
+                </div>
+            </div>
+        </div>
+
+        <p>Copyright © 2024</p>
+    </footer>
 </body>
+
 </html>
