@@ -7,6 +7,20 @@ Cajeros = [
     contraseña: "cajero1",
     }
 ]
+Meseros = [
+    {nombre: "Pedro",
+        apellidos: "Garcia Lopez",
+        edad: 30,
+        usuario: "mesero1",
+        contraseña: "mesero1",
+    },
+    {nombre: "Luis",
+        apellidos: "Martinez Hernandez",
+        edad: 35,
+        usuario: "mesero2",
+        contraseña: "mesero2",
+    }
+]
 
 // Obtener los usuarios guardados del localStorage
 function obtenerUsuarios() {
@@ -72,10 +86,9 @@ document.getElementById('iniciarSesionBtn')?.addEventListener('click', function(
     const usuario = document.getElementById('loginUsuario').value;
     const contraseña = document.getElementById('loginContraseña').value;
     const usuarios = obtenerUsuarios();
-    
+    const contenedorPrincipalIniciarSesion = document.getElementById('main-container-iniciarSesion');
     // Verificar si el usuario es un usuario regular
     if (usuarios[usuario] && usuarios[usuario].contraseña === contraseña) {
-        const contenedorPrincipalIniciarSesion = document.getElementById('main-container-iniciarSesion');
         contenedorPrincipalIniciarSesion.textContent = `Cargando...`;
         setTimeout(() => {
             sessionStorage.setItem('sesionActiva', true);
@@ -89,17 +102,24 @@ document.getElementById('iniciarSesionBtn')?.addEventListener('click', function(
     else {
         const cajero = Cajeros.find(c => c.usuario === usuario && c.contraseña === contraseña);
         if (cajero) {
-            const contenedorPrincipalIniciarSesion = document.getElementById('main-container-iniciarSesion');
             contenedorPrincipalIniciarSesion.textContent = `Cargando...`;
-            
             setTimeout(() => {
                 sessionStorage.setItem('sesionActiva', true);
                 alert('Sesión iniciada con éxito');
-                console.log(`Sesion iniciada como ${Cajeros.nombre[cajero]} ${Cajeros.apellidos[cajero]}`)
                 window.location.href = "../HTML/vistaCajero.html";
             }, 3000);
         } else {
+            const mesero = Meseros.find(mesero => mesero.usuario === usuario && mesero.contraseña === contraseña);
+            if (mesero) {
+            contenedorPrincipalIniciarSesion.textContent = `Cargando...`;
+            setTimeout(() => {
+                sessionStorage.setItem('sesionActiva', true);
+                alert('Sesión iniciada con éxito');
+                window.location.href = "../HTML/vistaMesero.html";
+            }, 3000);
+        } else{
             alert('Usuario o contraseña incorrectos');
+        }
         }
     }
 });

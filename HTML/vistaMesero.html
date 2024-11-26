@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista Mesero - Sabor Y Alma</title>
+    <link rel="icon" href="/IMAGES/LOGOS/IMG_2797.PNG">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/mobile.css" media="(max-width: 599px)">
+    <script src="../JS/usuarios.js" async></script>
+    <link rel="stylesheet" href="../CSS/styleVistaMesero.css">
+</head>
+<body>
+    <nav class="navbar">
+        <li class="nav-logo">
+            <button id="cerrarSesionBtn">
+                <p>Cerrar sesion aquí</p>
+            </button>
+        </li>
+    </nav>
+    <main class="main-vistaMesero" id="main-vistaMesero">
+        <h1>¿Qué accion vas a realizar?</h1>
+        <div>
+            <button id="realizarPedidoBtn">Realizar pedido</button>
+            <button id="recibirReservaBtn">Recibir reserva</button>
+        </div>
+    </main>
+    <script>
+    const botonRedireccionRealizarPedidoMesero = document.getElementById('recibirReservaBtn');
+        botonRedireccionRealizarPedidoMesero.addEventListener('click', () => {
+            const mainContainerVistaMesero = document.getElementById('main-vistaMesero')
+            mainContainerVistaMesero.innerHTML = '<h1 style="color: white; "> Cargando... </h1>'
+            setTimeout(() =>{
+                window.location.href = '../HTML/recibirReserva.html'
+            }, 2000)});
+            </script>
+</body>
+</html>
