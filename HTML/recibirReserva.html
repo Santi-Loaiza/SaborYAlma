@@ -13,8 +13,25 @@
         <li><a href="../HTML/vistaMesero.html" id="regresar-a"><h2 >Regresar</h2></a></li>
     </nav>
   <h1 class="title-reservas">Reservas realizadas</h1>
-  <div id="reservas-lista">
-    
-  </div><script src="../JS/mesero.js" async></script>
+  <div id="reservas-lista"></div>
+  <div id="modalFormulario" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <h1>Registro de Recibimiento de Reserva</h1>
+      <p><strong>Reserva ID:</strong> <span id="reserva-id"></span></p>
+     
+      <label for="totalPersonas">Número de personas de la reserva:</label>
+      <input type="number" id="totalPersonas" disabled>
+     
+      <label for="personasLlegadas">Número de personas que llegaron:</label>
+      <input type="number" id="personasLlegadas">
+      <button onclick="finalizarRecibimiento()">Finalizar</button>
+      
+      <div id="mensaje" style="display: none;">
+        <p>¡Reserva registrada exitosamente!</p>
+      </div>
+    </div>
+  </div>
+  <script src="../JS/mesero.js"></script>
 </body>
 </html>
