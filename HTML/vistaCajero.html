@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <link rel="stylesheet" href="../CSS/styleVistaCajero.css">
+    <script src="../JS/cajero.js" async></script>
+    <link rel="icon" href="/IMAGES/LOGOS/IMG_2797.PNG">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <li class="nav-logo">
+            <button id="cerrarSesionBtn">
+                <p>Cerrar sesion aquí</p>
+            </button>
+        </li>
+    </nav>
+    <h1>Pedidos del Día</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID Pedido</th>
+                <th>Número de Mesa</th>
+                <th>Total a Pagar</th>
+                <th>Detalles</th>
+            </tr>
+        </thead>
+        <tbody id="pedido-lista">
+            <!-- Las filas se generarán dinámicamente con JavaScript -->
+        </tbody>
+    </table>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal" id="modal">
+        <h2>Detalles del Pedido</h2>
+        <div id="detalle-pedido"></div>
+        <button class="close-btn" id="cerrar-modal">Cerrar</button>
+    </div>
+</body>
+</html>

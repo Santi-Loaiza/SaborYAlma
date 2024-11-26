@@ -1,3 +1,13 @@
+// USUARIOS YA CREADOS.
+Cajeros = [
+    {nombre: "Juan",
+    apellidos: "Velazquez Muñoz",
+    edad: 25, 
+    usuario: "cajero1",
+    contraseña: "cajero1",
+    }
+]
+
 // Obtener los usuarios guardados del localStorage
 function obtenerUsuarios() {
     const usuariosGuardados = localStorage.getItem('usuarios');
@@ -25,7 +35,7 @@ document.getElementById('registrarBtn')?.addEventListener('click', function(even
     // Guardar el nuevo usuario en el objeto
     if (nuevoUsuario && nuevoContraseña && nombre && apellido) {
         const contenedorPrincipalRegistro = document.getElementById('main-container-registro') 
-        contenedorPrincipalRegistro.innerHTML = `<h1 style="color: white;">Cargando...</h1>`
+        contenedorPrincipalRegistro.textContent = `Cargando...`
         setTimeout(
             () =>{
                 usuarios[nuevoUsuario] = {
@@ -55,32 +65,42 @@ document.getElementById('togglePassword')?.addEventListener('click', function() 
         this.textContent = 'Ver';
     }
 });
-
 // Iniciar sesión
 document.getElementById('iniciarSesionBtn')?.addEventListener('click', function(event) {
     event.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
 
     const usuario = document.getElementById('loginUsuario').value;
     const contraseña = document.getElementById('loginContraseña').value;
-
-    // Obtener usuarios existentes
     const usuarios = obtenerUsuarios();
-
-    // Verificar las credenciales
+    
+    // Verificar si el usuario es un usuario regular
     if (usuarios[usuario] && usuarios[usuario].contraseña === contraseña) {
         const contenedorPrincipalIniciarSesion = document.getElementById('main-container-iniciarSesion');
-        contenedorPrincipalIniciarSesion.innerHTML = `<h1 style="color: white;">Cargando...</h1>`
-        setTimeout(
-            () =>{
+        contenedorPrincipalIniciarSesion.textContent = `Cargando...`;
+        setTimeout(() => {
+            sessionStorage.setItem('sesionActiva', true);
+            sessionStorage.setItem('nombre', usuarios[usuario].nombre); // Guardar nombre en sessionStorage
+            sessionStorage.setItem('apellido', usuarios[usuario].apellido); // Guardar apellido en sessionStorage
+            alert('Sesión iniciada con éxito');
+            window.location.href = "../HTML/vistaCliente.html";
+        }, 3000);
+    } 
+    // Verificar si el usuario es un cajero
+    else {
+        const cajero = Cajeros.find(c => c.usuario === usuario && c.contraseña === contraseña);
+        if (cajero) {
+            const contenedorPrincipalIniciarSesion = document.getElementById('main-container-iniciarSesion');
+            contenedorPrincipalIniciarSesion.textContent = `Cargando...`;
+            
+            setTimeout(() => {
                 sessionStorage.setItem('sesionActiva', true);
-        sessionStorage.setItem('nombre', usuarios[usuario].nombre); // Guardar nombre en sessionStorage
-        sessionStorage.setItem('apellido', usuarios[usuario].apellido); // Guardar apellido en sessionStorage
-        alert('Sesión iniciada con éxito');
-        window.location.href = "../HTML/vistaCliente.html";
-            }, 3000)
-        
-    } else {
-        alert('Usuario o contraseña incorrectos');
+                alert('Sesión iniciada con éxito');
+                console.log(`Sesion iniciada como ${Cajeros.nombre[cajero]} ${Cajeros.apellidos[cajero]}`)
+                window.location.href = "../HTML/vistaCajero.html";
+            }, 3000);
+        } else {
+            alert('Usuario o contraseña incorrectos');
+        }
     }
 });
 
