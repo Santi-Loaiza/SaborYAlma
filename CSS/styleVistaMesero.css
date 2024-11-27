@@ -115,3 +115,67 @@
     background-color: var(--second-color);
     color: white;
   }
+#main-container-pedidoMesero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+#main-container-pedidoMesero h2{
+  margin-top: 10px;
+}
+#main-container-pedidoMesero .pedidoMeseroTitle{
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--second-color);
+  margin-bottom: 20px;
+}
+#main-container-pedidoMesero .ingresarNumeroMesaPedido{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid var(--second-color);
+  border-radius: 10px;
+  width: 30%;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 10px 1px #8e545478;
+}
+#carrito {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.item{
+  width: 260px;
+  height: 410px;
+}
+#contenedor-entradas,
+#contenedor-platosFuertes,
+#contenedero-postres{
+  width: 98%;
+}
+.item p{
+  max-height: 80px;
+  overflow: scroll;
+  margin-bottom: 10px;
+}
+.item img{
+  height: 160px;
+}
+#finalizarPedidoBtn{
+  background-color: var(--third-color);
+  padding: 15px;
+  margin-bottom: 100px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.3rem;
+}
+#finalizarPedidoBtn:hover{
+  background-color: var(--primary-color);
+  color: white;
+  }

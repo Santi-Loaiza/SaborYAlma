@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Pedido - Mesero</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/styleVistaMesero.css">
+    <script src="../JS/mesero.js" async></script>
+    <link rel="icon" href="../IMAGES/LOGOS/IMG_2797.PNG">
+</head>
+<body>
+    <nav class="navbar">
+        <li><a href="../HTML/vistaMesero.html" id="regresar-a"><h2 >Regresar</h2></a></li>
+    </nav>
+    <main id="main-container-pedidoMesero">
+        <h2 class="pedidoMeseroTitle">Registro de Pedido</h2>
+        <div class="ingresarNumeroMesaPedido">
+            <label for="numeroMesa">Número de Mesa:</label>
+            <input type="number" id="numeroMesa" name="numeroMesa" required>
+        </div>
+        <h1>Menú</h1>
+        <div class="menu-container">
+            <hr>
+            <h2>Entradas / Starters</h2>
+            <div id="contenedor-entradas"></div>
+            <hr>
+            <h2>Platos Fuertes / Main Course</h2>
+            <div id="contenedor-platosFuertes"></div>
+            <hr>
+            <h2>Postres / Desserts</h2>
+            <div id="contenedor-postres"></div>
+        </div>
+        <aside id="carrito"></aside>
+        <button id="finalizarPedidoBtn">Finalizar Pedido</button>
+        <h3 id="estadoPedido"></h3>
+    </main>
+</body>
+</html>

@@ -26,13 +26,20 @@
         </div>
     </main>
     <script>
-    const botonRedireccionRealizarPedidoMesero = document.getElementById('recibirReservaBtn');
-        botonRedireccionRealizarPedidoMesero.addEventListener('click', () => {
+    const botonRedireccionRecibirReserva = document.getElementById('recibirReservaBtn');
+        botonRedireccionRecibirReserva.addEventListener('click', () => {
             const mainContainerVistaMesero = document.getElementById('main-vistaMesero')
             mainContainerVistaMesero.innerHTML = '<h1 style="color: white; "> Cargando... </h1>'
             setTimeout(() =>{
                 window.location.href = '../HTML/recibirReserva.html'
             }, 2000)});
+    const botonRedireccionRealizarPedidoMesero = document.getElementById('realizarPedidoBtn')
+    botonRedireccionRealizarPedidoMesero.addEventListener('click', () => {
+        const mainContainerVistaMesero = document.getElementById('main-vistaMesero')
+        mainContainerVistaMesero.innerHTML = '<h1 style="color: white; ">Cargando...</h1>'
+            setTimeout(() =>{
+                window.location.href = '../HTML/realizarPedidoMesero.html'
+                }, 2000)});
             </script>
 </body>
 </html>
