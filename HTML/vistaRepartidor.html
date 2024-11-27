@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista Repartidor - Sabor Y Alma</title>
+    <link rel="icon" href="/IMAGES/LOGOS/IMG_2797.PNG">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/mobile.css" media="(max-width: 599px)">
+    <script src="../JS/usuarios.js" async></script>
+    <link rel="stylesheet" href="../CSS/styleVistaRepartidor.css">
+</head>
+<body>
+    <nav class="navbar">
+        <li class="nav-logo">
+            <button id="cerrarSesionBtn">
+                <p>Cerrar sesion aquí</p>
+            </button>
+        </li>
+    </nav>
+    <main class="main-vistaRepartidor" id="main-vistaRepartidor">
+        <h1>¿Qué accion vas a realizar?</h1>
+        <div>
+            <button id="misPedidosRepartidorBtn">Mis pedidos a entregar</button>
+            <button id="recibirReservaBtn">Historial de pedidos entregados</button>
+        </div>
+    </main>
+    <script>
+    const botonRedireccionRealizarPedidoMesero = document.getElementById('misPedidosRepartidorBtn');
+        botonRedireccionRealizarPedidoMesero.addEventListener('click', () => {
+            const mainContainerVistaMesero = document.getElementById('main-vistaRepartidor')
+            mainContainerVistaMesero.innerHTML = '<h1 style="color: white; "> Cargando... </h1>'
+            setTimeout(() =>{
+                window.location.href = '../HTML/pedidosRepartidor.html'
+            }, 2000)});
+            </script>
+</body>
+</html>

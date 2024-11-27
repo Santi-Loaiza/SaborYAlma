@@ -1,0 +1,77 @@
+:root {
+    --primary-color: #7d0505;
+    --second-color: #8e5454;
+    --third-color: #9a8b87;
+    --fourth-color: #0e5f01;
+    --fifth-color: #1c3504;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+.pedido-lista {
+    list-style-type: none;
+    padding: 0;
+}
+.pedido-item {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.pedido-item h3 {
+    margin: 0;
+}
+.pedido-item p {
+    margin: 5px 0;
+}
+.btn-entrega {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.main-vistaRepartidor{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../IMAGES/OTHERS/imagen-vista-repartidor.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 1000px 1000px 1000px rgba(0, 0, 0, 0.4);
+}
+.main-vistaRepartidor h1{
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+.main-vistaRepartidor button{
+    background-color: var(--fifth-color);
+    color: white;
+    border: none;
+    padding: 25px 35px;
+    font-size: 1.5rem;
+    margin: 30px;
+    border-radius: 5px;
+}
+.main-vistaRepartidor button:hover{
+    background-color: var(--fourth-color);
+    cursor: pointer;
+    color: black;
+}

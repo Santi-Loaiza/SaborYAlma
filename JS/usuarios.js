@@ -21,6 +21,15 @@ Meseros = [
         contraseña: "mesero2",
     }
 ]
+Repartidores = [
+    {
+        nombre: "Carlos",
+        apellidos: "Diaz Sanchez",
+        edad: 28,
+        usuario: "repartidor1",
+        contraseña: "repartidor1",
+    }
+]
 
 // Obtener los usuarios guardados del localStorage
 function obtenerUsuarios() {
@@ -118,11 +127,21 @@ document.getElementById('iniciarSesionBtn')?.addEventListener('click', function(
                 window.location.href = "../HTML/vistaMesero.html";
             }, 3000);
         } else{
+            const repartidor = Repartidores.find(repartidor => repartidor.usuario === usuario && repartidor.contraseña === contraseña);
+            if (repartidor) {
+            contenedorPrincipalIniciarSesion.textContent = `Cargando...`;
+            setTimeout(() => {
+                sessionStorage.setItem('sesionActiva', true);
+                alert('Sesión iniciada con éxito');
+                window.location.href = "../HTML/vistaRepartidor.html";
+            }, 3000);
+            } else
             alert('Usuario o contraseña incorrectos');
+            }
         }
         }
     }
-});
+);
 
 // Cerrar sesión
 document.getElementById('cerrarSesionBtn')?.addEventListener('click', function() {
