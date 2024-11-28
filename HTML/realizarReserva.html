@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Mesa</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="icon" href="../IMAGES/LOGOS/IMG_2797.PNG">
+    <style>
+        .hidden {
+            display: none;
+        }
+        .recomendaciones {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <li><a href="../HTML/vistaCliente.html" id="regresar-a"><h2 >Regresar</h2></a></li>
+    </nav>
+    <main class="main-container-realizarReserva">
+        <h1>Realizar Reserva</h1>
+    <form id="reservaForm">
+        <label for="numPersonas">Número de Personas:</label>
+        <input type="number" id="numPersonas" required min="1"><br><br>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" required><br><br>
+
+        <label for="observaciones" class="hidden" id="observacionesLabel">Observaciones:</label>
+        <textarea id="observaciones" class="hidden" rows="4" placeholder="Escribe tus observaciones aquí..."></textarea><br><br>
+    </form>
+
+    <div id="horasDisponibles" class="hidden">
+        <h2>Horas Disponibles:</h2>
+        <div id="listaHoras"></div>
+        <button id="finalizarReserva" class="hidden">Finalizar Reserva</button>
+    </div>
+
+    <div id="reservaConfirmada" class="hidden">
+        <h2>Reserva Confirmada</h2>
+        <p id="informacionReserva"></p>
+    </div>
+
+    <div id="recomendaciones" class="recomendaciones hidden">
+        <h3>Recomendaciones para el día de la reserva:</h3>
+        <ul>
+            <li>Llegue 15 minutos antes de su hora reservada.</li>
+            <li>Si tiene alguna alergia, infórmenos al llegar.</li>
+            <li>Disfrute de su comida y relájese.</li>
+        </ul>
+    </div> 
+    </main>
+   
+
+    <script src="../JS/usuarios.js" async></script>
+</body>
+</html>

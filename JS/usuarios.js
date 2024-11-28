@@ -458,10 +458,11 @@ function mostrarEntradas() {
     });
 }
   // Llamar a las funciones para mostrar los platos
-  mostrarEntradas();
+  if (window.location.pathname.includes("realizarPedido.html")) {
+   mostrarEntradas();
   mostrarPlatosFuertes();
   mostrarPostres();
-
+}
   let carrito = [];
   let total = 0;
   
@@ -520,3 +521,119 @@ function mostrarEntradas() {
     // Redirigir a la nueva página de detalles
     window.location.href = '../HTML/detallesPedido.html';
 }
+
+const horasMaximas = 20; // Máximo de personas por hora
+        const reservasPorHora = {}; // Objeto para llevar el registro de reservas
+
+        // Definir horas no disponibles por fecha
+        const horasNoDisponiblesPorFecha = {
+            "2024-11-29": ["12:30", "15:00", "18:00", "19:00"],
+            "2024-11-30": ["15:00", "16:00", "17:30","18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30"],
+            "2024-12-01": ["10:00", "11:00", "14:00", "18:00"],
+            // Agrega más fechas y horas no disponibles según sea necesario
+        };
+
+        // Horarios de reserva por día de la semana
+        const horariosPorDia = {
+            0: { apertura: "12:30", cierre: "20:00" }, // Lunes
+            1: { apertura: "12:30", cierre: "20:00" }, // Martes
+            2: { apertura: "12:30", cierre: "20:00" }, // Miércoles
+            3: { apertura: "12:30", cierre: "21:00" }, // Jueves
+            4: { apertura: "12:30", cierre: "21:30" }, // Viernes
+            5: { apertura: "13:30", cierre: "22:00" }, // Sábado
+            6: { apertura: "12:30", cierre: "19:30" }, // Domingo
+        };
+
+        const horasDisponibles = [];
+
+        // Establecer la fecha mínima en el campo de fecha
+        const fechaInput = document.getElementById("fecha");
+        const hoy = new Date();
+        const fechaFormateada = hoy.toISOString().split("T")[0];
+        fechaInput.setAttribute("min", fechaFormateada);
+
+        // Evento para refrescar horas disponibles al seleccionar una fecha
+        fechaInput.addEventListener("change", () => {
+            const fecha = new Date(fechaInput.value);
+            const diaSemana = fecha.getDay(); // Obtener el día de la semana (0-6)
+
+            // Limpiar horas disponibles
+            horasDisponibles.length = 0;
+
+            // Obtener las horas no disponibles para la fecha seleccionada
+            const horasNoDisponibles = horasNoDisponiblesPorFecha[fechaInput.value] || [];
+
+            // Obtener el horario de apertura y cierre para el día seleccionado
+            const { apertura, cierre } = horariosPorDia[diaSemana];
+
+            // Generar horas del día
+            const horaApertura = parseInt(apertura.split(':')[0]);
+            const horaCierre = parseInt(cierre.split(':')[0]) + (cierre.includes('30') ? 0.5 : 0); // Añadir media hora si es necesario
+
+            for (let i = horaApertura; i <= horaCierre; i++) {
+                const hora = `${i}:00`;
+                if (!horasNoDisponibles.includes(hora)) {
+                    horasDisponibles.push(hora);
+                }
+                if (i < horaCierre) {
+                    const horaMedia = `${i}:30`;
+                    if (!horasNoDisponibles.includes(horaMedia)) {
+                        horasDisponibles.push(horaMedia);
+                    }
+                }
+            }
+
+            // Mostrar horas disponibles
+            const listaHoras = document.getElementById("listaHoras");
+            listaHoras.innerHTML = '';
+            horasDisponibles.forEach(hora => {
+                listaHoras.innerHTML += `<div><input type="radio" name="hora" value="${hora}"><span>${hora}</span></div><br>`;
+            });
+
+            document.getElementById("horasDisponibles").classList.remove("hidden");
+            document.getElementById("finalizarReserva").classList.remove("hidden"); // Mostrar botón de finalizar reserva
+        });
+
+        document.getElementById("finalizarReserva").addEventListener("click", () => {
+            const selectedHour = document.querySelector('input[name="hora"]:checked');
+            if (selectedHour) {
+                const numPersonas = parseInt(document.getElementById("numPersonas").value);
+                const fecha = document.getElementById("fecha").value;
+                const horaSeleccionada = selectedHour.value;
+
+                // Mostrar el campo de observaciones
+                document.getElementById("observacionesLabel").classList.remove("hidden");
+                document.getElementById("observaciones").classList.remove("hidden");
+
+                // Agregar un botón para confirmar la reserva después de ingresar observaciones
+                const confirmarObservacionesBtn = document.createElement("button");
+                confirmarObservacionesBtn.innerText = "Confirmar Observaciones";
+                confirmarObservacionesBtn.classList.add("confirmarObservacionesBtn");
+                confirmarObservacionesBtn.type = "button";
+                document.getElementById("reservaForm").appendChild(confirmarObservacionesBtn);
+
+                confirmarObservacionesBtn.addEventListener("click", () => {
+                    const observaciones = document.getElementById("observaciones").value;
+
+                    // Actualizar el registro de reservas
+                    if (!reservasPorHora[fecha]) {
+                        reservasPorHora[fecha] = {};
+                    }
+                    reservasPorHora[fecha][horaSeleccionada] = (reservasPorHora[fecha][horaSeleccionada] || 0) + numPersonas;
+
+                    // Mostrar información de la reserva
+                    document.getElementById("informacionReserva").innerText = 
+                        `Reserva para ${numPersonas} persona(s) el ${fecha} a las ${horaSeleccionada}. Observaciones: ${observaciones}`;
+
+                    // Mostrar sección de recomendaciones
+                    document.getElementById("recomendaciones").classList.remove("hidden");
+
+                    // Simular tiempo de procesamiento
+                    setTimeout(() => {
+                        document.getElementById("reservaConfirmada").classList.remove("hidden");
+                    }, 2000); // 2 segundos de espera
+                });
+            } else {
+                alert("Por favor, selecciona una hora.");
+            }
+        });

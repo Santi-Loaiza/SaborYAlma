@@ -1061,3 +1061,59 @@ body.modal-open {
     justify-content: space-between;
     margin: 5px 0;
 }
+
+/*Pagina de realizar reserva*/
+.main-container-realizarReserva{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+}
+.main-container-realizarReserva h1{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.main-container-realizarReserva input{
+    border-radius: 3px;
+}
+#horasDisponibles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+#listaHoras{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 10px;
+    margin-top: 10px;   
+}
+#listaHoras div{
+    display: flex;
+    flex-direction: row;
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    border: solid 1px black;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+#finalizarReserva{
+    background-color: rgb(183, 178, 178);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.confirmarObservacionesBtn{
+    background-color: var(--second-color);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 20px;
+}
+.confirmarObservacionesBtn:hover{
+    background-color: var(--primary-color);
+}

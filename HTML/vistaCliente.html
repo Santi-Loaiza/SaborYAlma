@@ -31,7 +31,7 @@
 
             </section>
             <section>
-                <button>Realizar reserva</button>
+                <button onclick="redireccionarRealizarReserva()">Realizar reserva</button>
             </section>
             </div>
             
@@ -43,6 +43,13 @@
                 setTimeout(() => {
                     window.location.href = '../HTML/realizarPedido.html';
                 }, 1500)
+            }
+            function redireccionarRealizarReserva() {
+                const contenedorPrincipalVistaCliente = document.getElementById('divMain-vistaCliente')
+                contenedorPrincipalVistaCliente.innerHTML = '<h1 style=" height: 60vh; text-align:center; align-content: center ; color:white;">Cargando...</h1>'
+                setTimeout(() => {
+                    window.location.href = '../HTML/realizarReserva.html';
+                    }, 1500)
             }
         </script>
     </main>
