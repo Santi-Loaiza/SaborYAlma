@@ -600,34 +600,37 @@ const horasMaximas = 20; // Máximo de personas por hora
                 const numPersonas = parseInt(document.getElementById("numPersonas").value);
                 const fecha = document.getElementById("fecha").value;
                 const horaSeleccionada = selectedHour.value;
-
+        
+                // Deshabilitar el botón para evitar clics múltiples
+                document.getElementById("finalizarReserva").disabled = true;
+        
                 // Mostrar el campo de observaciones
                 document.getElementById("observacionesLabel").classList.remove("hidden");
                 document.getElementById("observaciones").classList.remove("hidden");
-
+        
                 // Agregar un botón para confirmar la reserva después de ingresar observaciones
                 const confirmarObservacionesBtn = document.createElement("button");
                 confirmarObservacionesBtn.innerText = "Confirmar Observaciones";
                 confirmarObservacionesBtn.classList.add("confirmarObservacionesBtn");
                 confirmarObservacionesBtn.type = "button";
                 document.getElementById("reservaForm").appendChild(confirmarObservacionesBtn);
-
+        
                 confirmarObservacionesBtn.addEventListener("click", () => {
                     const observaciones = document.getElementById("observaciones").value;
-
+        
                     // Actualizar el registro de reservas
                     if (!reservasPorHora[fecha]) {
                         reservasPorHora[fecha] = {};
                     }
                     reservasPorHora[fecha][horaSeleccionada] = (reservasPorHora[fecha][horaSeleccionada] || 0) + numPersonas;
-
+        
                     // Mostrar información de la reserva
                     document.getElementById("informacionReserva").innerText = 
                         `Reserva para ${numPersonas} persona(s) el ${fecha} a las ${horaSeleccionada}. Observaciones: ${observaciones}`;
-
+        
                     // Mostrar sección de recomendaciones
                     document.getElementById("recomendaciones").classList.remove("hidden");
-
+        
                     // Simular tiempo de procesamiento
                     setTimeout(() => {
                         document.getElementById("reservaConfirmada").classList.remove("hidden");

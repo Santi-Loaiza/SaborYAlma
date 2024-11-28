@@ -65,3 +65,24 @@ th {
 .close-btn:hover {
     background-color: darkred;
 }
+#modal-pago{
+    background-color: white;
+}
+#modal-pago form{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#modal-pago form button{
+    border: none;
+    padding: 10px 20px;
+    width: 50%;
+    border-radius: 5px;
+}
+#modal-pago form button:hover{
+    background-color: var(--second-color);
+    color: white;
+}

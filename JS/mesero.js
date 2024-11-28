@@ -442,9 +442,17 @@ function mostrarCarrito() {
             <div>
                 <h3>${producto.nombre} (x${producto.cantidad})</h3>
                 <p>Precio: $${producto.precio * producto.cantidad}</p>
+                <button onclick="eliminarDelCarrito()">Eliminar</button>
             </div>
         `;
     });
+}
+function eliminarDelCarrito(index) {
+    // Eliminar el producto del carrito usando el índice
+    carrito.splice(index, 1);
+    
+    // Mostrar el carrito actualizado
+    mostrarCarrito();
 }
 // Función para finalizar el pedido
 document.getElementById('finalizarPedidoBtn').addEventListener('click', () => {

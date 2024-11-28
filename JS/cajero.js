@@ -77,6 +77,7 @@ const pedidos = [
     }
 ];
 
+// Asignar ID a cada pedido
 pedidos.forEach((pedido, index) => {
     pedido.id = index + 1;
 });
@@ -87,6 +88,14 @@ const modalOverlay = document.getElementById('modal-overlay');
 const detallePedido = document.getElementById('detalle-pedido');
 const cerrarModal = document.getElementById('cerrar-modal');
 
+const modalPago = document.getElementById('modal-pago');
+const modalPagoOverlay = document.getElementById('modal-pago-overlay');
+const cerrarModalPago = document.getElementById('cerrar-modal-pago');
+const formPago = document.getElementById('form-pago');
+const montoPagoInput = document.getElementById('monto-pago');
+const pedidoIdPagoInput = document.getElementById('pedido-id-pago');
+const metodoPagoInput = document.getElementById('metodo-pago');
+
 function mostrarPedidos() {
     pedidos.forEach(pedido => {
         const fila = document.createElement('tr');
@@ -95,6 +104,7 @@ function mostrarPedidos() {
             <td>${pedido.mesa}</td>
             <td>$${pedido.total.toFixed(2)}</td>
             <td><button onclick="abrirModal(${pedido.id})">Ver Detalles</button></td>
+            <td><button onclick="abrirModalPago(${pedido.id})">Registrar Pago</button></td>
         `;
         listaPedidos.appendChild(fila);
     });
@@ -102,20 +112,58 @@ function mostrarPedidos() {
 
 function abrirModal(id) {
     const pedido = pedidos.find(p => p.id === id);
-    if (pedido) {
-        const servicio = (pedido.total * 0.10).toFixed(2);
+    if (pedido) {const servicio = (pedido.total * 0.10).toFixed(2);
         detallePedido.innerHTML = `
             <p><strong>Platos:</strong> ${pedido.platos.join(", ")}</p>
             <p><strong>Servicio (10%):</strong> $${servicio}</p>
         `;
         modal.style.display = 'block';
         modalOverlay.style.display = 'block';
+    }}
+
+    function abrirModalPago(id) {
+        const pedido = pedidos.find(p => p.id === id);
+        if (pedido) {
+            pedidoIdPagoInput.value = id; // Guardar el ID del pedido en un campo oculto
+            montoPagoInput.value = pedido.total.toFixed(2); // Establecer el monto a pagar
+            metodoPagoInput.value = ""; // Limpiar la selección del método de pago
+            modalPago.style.display = 'block';
+            modalPagoOverlay.style.display = 'block';
+        }
     }
-}
+    
 
 cerrarModal.addEventListener('click', () => {
     modal.style.display = 'none';
     modalOverlay.style.display = 'none';
+});
+
+cerrarModalPago.addEventListener('click', () => {
+    modalPago.style.display = 'none';
+    modalPagoOverlay.style.display = 'none';
+});
+
+formPago.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevenir el envío del formulario
+    const id = parseInt(pedidoIdPagoInput.value);
+    const montoPago = parseFloat(montoPagoInput.value);
+    const metodoPago = metodoPagoInput.value;
+
+    // Aquí puedes agregar la lógica para registrar el pago, como actualizar el estado del pedido
+    console.log(`Pago registrado para el pedido ID ${id}: $${montoPago.toFixed(2)} con método ${metodoPago}`);
+
+    // Cambiar el contenido del modal para indicar que el pedido ha sido pagado
+    modalPago.innerHTML = `
+        <h2>Pago Registrado</h2>
+        <p>El pedido ID ${id} ha sido pagado con un monto de $${montoPago.toFixed(2)} usando el método de pago: ${metodoPago}.</p>
+        <button type="button" id="cerrar-modal-pago">Cerrar</button>
+    `;
+
+    // Reasignar el evento de cerrar modal al nuevo botón
+    document.getElementById('cerrar-modal-pago').addEventListener('click', () => {
+        modalPago.style.display = 'none';
+        modalPagoOverlay.style.display = 'none';
+    });
 });
 
 mostrarPedidos();

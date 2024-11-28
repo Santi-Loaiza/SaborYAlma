@@ -14,7 +14,7 @@
     <nav class="navbar">
         <li class="nav-logo">
             <button id="cerrarSesionBtn">
-                <p>Cerrar sesion aquí</p>
+                <p>Cerrar sesión aquí</p>
             </button>
         </li>
     </nav>
@@ -26,6 +26,7 @@
                 <th>Número de Mesa</th>
                 <th>Total a Pagar</th>
                 <th>Detalles</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody id="pedido-lista">
@@ -33,12 +34,39 @@
         </tbody>
     </table>
 
-    <!-- Modal -->
+    <!-- Modal para detalles del pedido -->
     <div class="modal-overlay" id="modal-overlay"></div>
     <div class="modal" id="modal">
         <h2>Detalles del Pedido</h2>
         <div id="detalle-pedido"></div>
         <button class="close-btn" id="cerrar-modal">Cerrar</button>
     </div>
+
+<!-- Modal para registro de pago -->
+<div class="modal-overlay" id="modal-pago-overlay"></div>
+<div class="modal" id="modal-pago">
+    <h2>Registrar Pago</h2>
+    <form id="form-pago">
+        <div>
+            <label for="monto-pago">Monto a Pagar:</label>
+        <input type="number" id="monto-pago" required disabled> <!-- Campo deshabilitado -->
+        <input type="hidden" id="pedido-id-pago">
+        </div>
+        
+        <div>
+            <label for="metodo-pago">Método de Pago:</label>
+        <select id="metodo-pago" required>
+            <option value="" disabled selected>Seleccione un método</option>
+            <option value="efectivo">Efectivo</option>
+            <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+            <option value="transferencia">Transferencia Bancaria</option>
+        </select>
+        </div>
+        
+        
+        <button type="submit">Registrar Pago</button>
+        <button type="button" id="cerrar-modal-pago">Cerrar</button>
+    </form>
+</div>
 </body>
 </html>
